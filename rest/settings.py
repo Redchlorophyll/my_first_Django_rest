@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'api_basic',
+    'google',
 ]
 
 # REST_FRAMEWORK = {
@@ -48,6 +49,12 @@ INSTALLED_APPS = [
 #         'rest_framework.authentication.SessionAuthentication',
 #     ]
 # }
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
